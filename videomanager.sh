@@ -36,7 +36,7 @@ while :
     PS3=$MAINPROMPT  # PS3 is the prompt for the select construct.
     select option in "Config Menu" "Apply Shaders" "Overlays for 1080p" "Overlays for 720p" Quit
     do
-      case $REPLY in   # REPLY is set by the select construct, and is the number of the selection.  
+      case $REPLY in   # REPLY is set by the select construct, and is the number of the selection.
         1) # Config Menu
           # Loop sub menu until user exits explicitly.
           while :
@@ -49,7 +49,7 @@ while :
                   1) # Backup Settings
                     echo ""
                     echo ""
-                    # Backup existing files and copy them into the new backup folders. 
+                    # Backup existing files and copy them into the new backup folders.
                     # Backup existing videomodes.cfg file. This may not already exist though.
                     cp "$configdir/all/videomodes.cfg" "$backupdir/videomodes-backup.cfg"
                     # Backup existing retroarch-core-options.cfg
@@ -70,7 +70,7 @@ while :
                     cp "$configdir/sega32x/retroarch.cfg" "$backupdir/sega32x/retroarch-backup.cfg" # Sega 32x
                     cp "$configdir/segacd/retroarch.cfg" "$backupdir/segacd/retroarch-backup.cfg" # Sega CD
                     echo "Backup complete"
-                    echo "Backed up Atari Lynx, FBA, GG, GB, GBA, GBC, MasterSystem, Megadrive, NeoGeo, NES, PC Engine, PSX, Sega 32x, Sega CD, SNES"   
+                    echo "Backed up Atari Lynx, FBA, GG, GB, GBA, GBC, MasterSystem, Megadrive, NeoGeo, NES, PC Engine, PSX, Sega 32x, Sega CD, SNES"
                     break  #  Breaks out of the select, back to the mango loop.
                   ;;
                   2) # Restore Backup
@@ -171,7 +171,7 @@ while :
                     echo ""
                     echo ""
                     break  #  Breaks out of the select, back to the mango loop.
-                  ;;  
+                  ;;
                   6) # Quit
                     break 2  # Breaks out 2 levels, the select loop plus the mango while loop, back to the main loop.
                   ;;
@@ -192,7 +192,7 @@ while :
               select option1 in General-Shader CRT-Shader Quit
               do
                 case $REPLY in
-                  1) # General-Shader      
+                  1) # General-Shader
                     echo ""
                     echo ""
                     # Apply shaders to all systems. Possibly better for 720p output that the overlays. Set Video Modes Back
@@ -479,5 +479,5 @@ while :
       esac
     done
   done
-exit 0
+#exit 0
 $
