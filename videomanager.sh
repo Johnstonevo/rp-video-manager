@@ -13,7 +13,7 @@ datadir="$home/RetroPie"
 biosdir="$datadir/BIOS"
 romdir="$datadir/roms"
 emudir="$rootdir/emulators"
-configdir="$rootdir/configs"
+configdir="$home/.config/RetroPie"
 
 scriptdir="$(dirname "$0")"
 scriptdir="$(cd "$scriptdir" && pwd)"
