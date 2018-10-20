@@ -106,7 +106,7 @@ while :
                     # Copy Videomodes.cfg back
                     cp "$scriptdir/all-videomodes/videomodes-original.cfg" "$raconfigdir/videomodes.cfg"
                     #Write the original core options file
-                    cp "$scriptdir/all-videomodes/retroarch-core-options-original.cfg" "$configdir/retroarch-core-options.cfg"
+                    cp "$scriptdir/all-videomodes/retroarch-core-options-original.cfg" "$raconfigdir/retroarch-core-options.cfg"
                     cp "$sysrarch/snes/retroarch-original.cfg" "$configdir/snes/retroarch.cfg" # SNES
                     cp "$sysrarch/atarilynx/retroarch-original.cfg" "$configdir/atarilynx/retroarch.cfg" # Atari Lynx
                     cp "$sysrarch/fba/retroarch-original.cfg" "$configdir/fba/retroarch.cfg" # FBA
@@ -132,34 +132,34 @@ while :
                     echo ""
                     echo "Please wait (Should take under 5 mins)"
                     # Copy Shaders across
-                    sudo cp -u "$scriptdir/shaders/crt-hyllian-sharpness-hack.glsl" "$emudir/retroarch/shader/crt-hyllian-sharpness-hack.glsl"
-                    sudo cp -u "$scriptdir/shaders/Brighter-with_Contrast.glslp" "$emudir/retroarch/shader/Brighter-with_Contrast.glslp"
+                    sudo cp -u "$scriptdir/shaders/crt-hyllian-sharpness-hack.glsl" "$raconfigdir/shader/crt-hyllian-sharpness-hack.glsl"
+                    sudo cp -u "$scriptdir/shaders/Brighter-with_Contrast.glslp" "$raconfigdir/shader/Brighter-with_Contrast.glslp"
                     # General overlays
-                    sudo mkdir -p "$emudir/retroarch/overlays/1080p_4-3"
-                    sudo cp -r "$scriptdir/1080p_4-3/"* "$emudir/retroarch/overlays/1080p_4-3/"
+                    sudo mkdir -p "$raconfigdir/overlays/1080p_4-3"
+                    sudo cp -r "$scriptdir/1080p_4-3/"* "$raconfigdir/overlays/1080p_4-3/"
                     # Thorig overlays
-                    sudo cp -r "$scriptdir/users/thorig/overlays/"* "$emudir/retroarch/overlays/1080p_4-3/"
+                    sudo cp -r "$scriptdir/users/thorig/overlays/"* "$raconfigdir/overlays/1080p_4-3/"
                     # davej Shaders
-                    sudo cp -r "$scriptdir/users/davej/shaders/crt-pi/"* "$emudir/retroarch/shader/"
+                    sudo cp -r "$scriptdir/users/davej/shaders/crt-pi/"* "$raconfigdir/shader/"
                     # Chito Overlays
-                    sudo mkdir -p "$emudir/retroarch/overlays/chito"
-                    sudo cp -r "$scriptdir/users/chito/overlays/"* "$emudir/retroarch/overlays/chito/"
+                    sudo mkdir -p "$raconfigdir/overlays/chito"
+                    sudo cp -r "$scriptdir/users/chito/overlays/"* "$raconfigdir/overlays/chito/"
                     # Arcade Bezels
-                    sudo mkdir -p "$emudir/retroarch/shader/arcade-bezel-shader"
-                    sudo cp -r "$scriptdir/users/arcade-bezels/arcade-bezel-shader/"* "$emudir/retroarch/shader/arcade-bezel-shader/"
-                    sudo mkdir -p "$emudir/retroarch/overlays/arcade-bezel-overlays"
-                    sudo cp -r "$scriptdir/users/arcade-bezels/arcade-bezel-overlays/"* "$emudir/retroarch/overlays/arcade-bezel-overlays/"
+                    sudo mkdir -p "$raconfigdir/shader/arcade-bezel-shader"
+                    sudo cp -r "$scriptdir/users/arcade-bezels/arcade-bezel-shader/"* "$raconfigdir/shader/arcade-bezel-shader/"
+                    sudo mkdir -p "$raconfigdir/overlays/arcade-bezel-overlays"
+                    sudo cp -r "$scriptdir/users/arcade-bezels/arcade-bezel-overlays/"* "$raconfigdir/overlays/arcade-bezel-overlays/"
                     # Gameboy Palette
                     sudo mkdir -p "$biosdir/palettes"
                     sudo cp "$scriptdir/shaders/default.pal" "$biosdir/palettes/"
                     # Copy Overlay for patrickm settings. From the shaders dir which isnt quite right but it doesnt matter.
-                    sudo mkdir -p "$emudir/retroarch/overlays/effects/scanlines"
-                    sudo cp "$scriptdir/shaders/patrickm-scanlines1920x1080-5x.cfg" "$emudir/retroarch/overlays/effects/scanlines/patrickm-scanlines1920x1080-5x.cfg"
-                    sudo cp "$scriptdir/shaders/patrickm-scanlines1920x1080-5x.png" "$emudir/retroarch/overlays/effects/scanlines/patrickm-scanlines1920x1080-5x.png"
-                    sudo cp "$scriptdir/shaders/patrickm-scanlines1920x1080.cfg" "$emudir/retroarch/overlays/effects/scanlines/patrickm-scanlines1920x1080.cfg"
-                    sudo cp "$scriptdir/shaders/patrickm-scanlines1920x1080.png" "$emudir/retroarch/overlays/effects/scanlines/patrickm-scanlines1920x1080.png"
-                    sudo cp "$scriptdir/shaders/patrickm-scanlines1280x720.cfg" "$emudir/retroarch/overlays/effects/scanlines/patrickm-scanlines1280x720.cfg"
-                    sudo cp "$scriptdir/shaders/patrickm-scanlines1280x720.png" "$emudir/retroarch/overlays/effects/scanlines/patrickm-scanlines1280x720.png"
+                    sudo mkdir -p "$raconfigdir/overlays/effects/scanlines"
+                    sudo cp "$scriptdir/shaders/patrickm-scanlines1920x1080-5x.cfg" "$raconfigdir/overlays/effects/scanlines/patrickm-scanlines1920x1080-5x.cfg"
+                    sudo cp "$scriptdir/shaders/patrickm-scanlines1920x1080-5x.png" "$raconfigdir/overlays/effects/scanlines/patrickm-scanlines1920x1080-5x.png"
+                    sudo cp "$scriptdir/shaders/patrickm-scanlines1920x1080.cfg" "$raconfigdir/overlays/effects/scanlines/patrickm-scanlines1920x1080.cfg"
+                    sudo cp "$scriptdir/shaders/patrickm-scanlines1920x1080.png" "$raconfigdir/overlays/effects/scanlines/patrickm-scanlines1920x1080.png"
+                    sudo cp "$scriptdir/shaders/patrickm-scanlines1280x720.cfg" "$raconfigdir/overlays/effects/scanlines/patrickm-scanlines1280x720.cfg"
+                    sudo cp "$scriptdir/shaders/patrickm-scanlines1280x720.png" "$raconfigdir/overlays/effects/scanlines/patrickm-scanlines1280x720.png"
                     echo "Required files installed - you dont need to run this again"
                     echo ""
                     break  #  Breaks out of the select, back to the mango loop.
@@ -415,7 +415,7 @@ while :
                     echo "Arcade bezel configs have been copied to $romdir/mame-libretro - these will apply to matching roms with MAME 2003"
                     echo "You can of course manually copy these configs (romname.zip.cfg) to any libretro mame/fba based rom folder you want"
                     echo ""
-                    echo "Remember you can manually turn the curvature effect on and off (to reduce CPU use) by manually editing nano $emudir/retroarch/shader/arcade-bezel-shader/shaders/crt-pi.glsl"
+                    echo "Remember you can manually turn the curvature effect on and off (to reduce CPU use) by manually editing nano $raconfigdir/shader/arcade-bezel-shader/shaders/crt-pi.glsl"
                     echo "#define CURVATURE = on //#define CURVATURE = off"
                     echo ""
                     break

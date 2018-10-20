@@ -39,9 +39,9 @@ You can similarly comment out the MULTISAMPLE line and speed things up a bit by 
 
 MASK_BRIGHTNESS controls how bright the screen will be.
 
-You’re best leaving the others alone. Altering SCAN_LINE_WEIGHT and BLOOM_FACTOR will likely make moire effects worse. The two GAMMA values affect brightness and should not need changing on a correctly configured monitor (and if you monitor is not correctly configured, fixing that is a far better idea).
+Youï¿½re best leaving the others alone. Altering SCAN_LINE_WEIGHT and BLOOM_FACTOR will likely make moire effects worse. The two GAMMA values affect brightness and should not need changing on a correctly configured monitor (and if you monitor is not correctly configured, fixing that is a far better idea).
 
-It’s perhaps worth pointing out that the shader is designed to be used with linear filtering. CRT electron beams are not square and the combination of linear filtering with scan lines and bloom makes the edges of bright pixels next to dark pixels rounded which looks a bit more accurate. People are of course free to set filtering to nearest if they prefer.
+Itï¿½s perhaps worth pointing out that the shader is designed to be used with linear filtering. CRT electron beams are not square and the combination of linear filtering with scan lines and bloom makes the edges of bright pixels next to dark pixels rounded which looks a bit more accurate. People are of course free to set filtering to nearest if they prefer.
 
 "Overlays"
 These are the settings from user "patl" found here:
@@ -61,14 +61,14 @@ There is no TV border showing on the overlay here.
 These are the settings from user "patrickm" found here:
 http://blog.petrockblock.com/forums/topic/list-of-recommended-shaders-for-raspberry-piretropie-how-to-get-the-crt-look/
 
-patrickm has said "I think 5x is preferable for most systems that displayed on a CRT TV such as NES, SNES, and Genesis because it doesn’t show any of the overscan that was cropped on a real CRT and it doesn’t result in any letterboxing of the image, which takes full advantage of the screen/TV’s display area."
+patrickm has said "I think 5x is preferable for most systems that displayed on a CRT TV such as NES, SNES, and Genesis because it doesnï¿½t show any of the overscan that was cropped on a real CRT and it doesnï¿½t result in any letterboxing of the image, which takes full advantage of the screen/TVï¿½s display area."
 
 
 "Consoles-1080p"
 These are the settings from user "patrickm" found here:
 http://blog.petrockblock.com/forums/topic/list-of-recommended-shaders-for-raspberry-piretropie-how-to-get-the-crt-look/
 
-patrickm has said "some people might prefer 4x because the scanlines are slightly bolder/thicker at that scale, and some people like bolder scanlines. Or, someone might simply want to see every line put out by the console, even if it wasn’t meant to be displayed."
+patrickm has said "some people might prefer 4x because the scanlines are slightly bolder/thicker at that scale, and some people like bolder scanlines. Or, someone might simply want to see every line put out by the console, even if it wasnï¿½t meant to be displayed."
 
 "Thorig-1080p"
 These settings are using new custom overlays that have a different TV overlay used.
@@ -84,8 +84,8 @@ These are designed for a 720p screen
 
 "Arcade Bezels"
 This will apply overlays on a per rom basis including shaders. The curvature effect is on by default but you can turn this off if you edit
-/opt/retropie/emulators/retroarch/shader/arcade-bezel-shader/shaders/crt-pi.glsl
-/opt/retropie/emulators/retroarch/shader/arcade-bezel-shader/shaders/crt-pi-vertical.glsl
+/home/$USER/.config/retroarch/shader/arcade-bezel-shader/shaders/crt-pi.glsl
+/home/$USER/.config/retroarch/shader/arcade-bezel-shader/shaders/crt-pi-vertical.glsl
 #define CURVATURE = on
 //#define CURVATURE = off
 

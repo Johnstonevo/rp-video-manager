@@ -1,3 +1,3 @@
 shaders = 2
-shader0 = "/opt/retropie/emulators/retroarch/shader/gamma.glsl"
-shader1 = "/opt/retropie/emulators/retroarch/shader/misc/image-adjustment.glsl"
+shader0 = "/home/$USER/.config/retroarch/shader/gamma.glsl"
+shader1 = "/home/$USER/.config/retroarch/shader/misc/image-adjustment.glsl"
