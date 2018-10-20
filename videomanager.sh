@@ -106,7 +106,7 @@ while :
                     # Copy Videomodes.cfg back
                     cp "$scriptdir/all-videomodes/videomodes-original.cfg" "$raconfigdir/videomodes.cfg"
                     #Write the original core options file
-                    cp "$scriptdir/all-videomodes/retroarch-core-options-original.cfg" "$raconfigdir/retroarch-core-options.cfg"
+                    cp "$scriptdir/all-videomodes/retroarch-core-options-original.cfg" "$configdir/retroarch-core-options.cfg"
                     cp "$sysrarch/snes/retroarch-original.cfg" "$configdir/snes/retroarch.cfg" # SNES
                     cp "$sysrarch/atarilynx/retroarch-original.cfg" "$configdir/atarilynx/retroarch.cfg" # Atari Lynx
                     cp "$sysrarch/fba/retroarch-original.cfg" "$configdir/fba/retroarch.cfg" # FBA
