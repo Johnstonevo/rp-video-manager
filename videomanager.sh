@@ -14,6 +14,7 @@ biosdir="$datadir/BIOS"
 romdir="$datadir/roms"
 emudir="$rootdir/emulators"
 configdir="$home/.config/RetroPie"
+raconfigdir="$home/.config/retoroarch"
 
 scriptdir="$(dirname "$0")"
 scriptdir="$(cd "$scriptdir" && pwd)"
@@ -51,9 +52,9 @@ while :
                     echo ""
                     # Backup existing files and copy them into the new backup folders.
                     # Backup existing videomodes.cfg file. This may not already exist though.
-                    cp "$configdir/all/videomodes.cfg" "$backupdir/videomodes-backup.cfg"
+                    cp "$raconfigdir/videomodes.cfg" "$backupdir/videomodes-backup.cfg"
                     # Backup existing retroarch-core-options.cfg
-                    cp "$configdir/all/retroarch-core-options.cfg" "$backupdir/retroarch-core-options-backup.cfg"
+                    cp "$raconfigdir/retroarch-core-options.cfg" "$backupdir/retroarch-core-options-backup.cfg"
                     cp "$configdir/snes/retroarch.cfg" "$backupdir/snes/retroarch-backup.cfg" # SNES
                     cp "$configdir/atarilynx/retroarch.cfg" "$backupdir/atarilynx/retroarch-backup.cfg" # Atari Lynx
                     cp "$configdir/fba/retroarch.cfg" "$backupdir/fba/retroarch-backup.cfg" # FBA
@@ -77,9 +78,9 @@ while :
                     echo ""
                     echo ""
                     # Copies files that were backed up, back into live directories. Retore blank videomodes file.
-                    cp "$backupdir/videomodes-backup.cfg" "$configdir/all/videomodes.cfg"
+                    cp "$backupdir/videomodes-backup.cfg" "$raconfigdir/videomodes.cfg"
                     #Restore existing retroarch-core-options.cfg
-                    cp "$backupdir/retroarch-core-options-backup.cfg" "$configdir/all/retroarch-core-options.cfg"
+                    cp "$backupdir/retroarch-core-options-backup.cfg" "$raconfigdir/retroarch-core-options.cfg"
                     cp "$backupdir/snes/retroarch-backup.cfg" "$configdir/snes/retroarch.cfg" # SNES
                     cp "$backupdir/atarilynx/retroarch-backup.cfg" "$configdir/atarilynx/retroarch.cfg" # Atari Lynx
                     cp "$backupdir/fba/retroarch-backup.cfg" "$configdir/fba/retroarch.cfg" # FBA
@@ -103,9 +104,9 @@ while :
                     echo ""
                     echo ""
                     # Copy Videomodes.cfg back
-                    cp "$scriptdir/all-videomodes/videomodes-original.cfg" "$configdir/all/videomodes.cfg"
+                    cp "$scriptdir/all-videomodes/videomodes-original.cfg" "$raconfigdir/videomodes.cfg"
                     #Write the original core options file
-                    cp "$scriptdir/all-videomodes/retroarch-core-options-original.cfg" "$configdir/all/retroarch-core-options.cfg"
+                    cp "$scriptdir/all-videomodes/retroarch-core-options-original.cfg" "$raconfigdir/retroarch-core-options.cfg"
                     cp "$sysrarch/snes/retroarch-original.cfg" "$configdir/snes/retroarch.cfg" # SNES
                     cp "$sysrarch/atarilynx/retroarch-original.cfg" "$configdir/atarilynx/retroarch.cfg" # Atari Lynx
                     cp "$sysrarch/fba/retroarch-original.cfg" "$configdir/fba/retroarch.cfg" # FBA
@@ -196,7 +197,7 @@ while :
                     echo ""
                     echo ""
                     # Apply shaders to all systems. Possibly better for 720p output that the overlays. Set Video Modes Back
-                    cp "$scriptdir/all-videomodes/videomodes-original.cfg" "$configdir/all/videomodes.cfg"
+                    cp "$scriptdir/all-videomodes/videomodes-original.cfg" "$raconfigdir/videomodes.cfg"
                     cp "$sysrarch/snes/retroarch-shader.cfg" "$configdir/snes/retroarch.cfg" # SNES
                     cp "$sysrarch/atarilynx/retroarch-shader.cfg" "$configdir/atarilynx/retroarch.cfg" # Atari Lynx
                     cp "$sysrarch/fba/retroarch-shader.cfg" "$configdir/fba/retroarch.cfg" # FBA
@@ -261,7 +262,7 @@ while :
                     echo ""
                     echo ""
                     #Apply overlays with the TV border. Designed to emulate a 4:3 approach. Copy VideoModes
-                    cp "$scriptdir/all-videomodes/videomodes-updated.cfg" "$configdir/all/videomodes.cfg"
+                    cp "$scriptdir/all-videomodes/videomodes-updated.cfg" "$raconfigdir/videomodes.cfg"
                     cp "$sysrarch/snes/retroarch-overlay.cfg" "$configdir/snes/retroarch.cfg" # SNES
                     cp "$sysrarch/atarilynx/retroarch-overlay.cfg" "$configdir/atarilynx/retroarch.cfg" # Atari Lynx
                     cp "$sysrarch/gamegear/retroarch-overlay.cfg" "$configdir/gamegear/retroarch.cfg" # GameGear
@@ -287,7 +288,7 @@ while :
                     echo ""
                     #Same as overlays above, but smooth option turned off.
                     # Copy VideoModes
-                    cp "$scriptdir/all-videomodes/videomodes-updated.cfg" "$configdir/all/videomodes.cfg"
+                    cp "$scriptdir/all-videomodes/videomodes-updated.cfg" "$raconfigdir/videomodes.cfg"
                     cp "$sysrarch/snes/retroarch-overlay-smooth-off.cfg" "$configdir/snes/retroarch.cfg" # SNES
                     cp "$sysrarch/atarilynx/retroarch-overlay-smooth-off.cfg" "$configdir/atarilynx/retroarch.cfg" # Atari Lynx
                     cp "$sysrarch/gamegear/retroarch-overlay-smooth-off.cfg" "$configdir/gamegear/retroarch.cfg" # GameGear
@@ -313,7 +314,7 @@ while :
                     echo ""
                     echo ""
                     # Copy VideoModes
-                    cp "$scriptdir/all-videomodes/videomodes-updated.cfg" "$configdir/all/videomodes.cfg"
+                    cp "$scriptdir/all-videomodes/videomodes-updated.cfg" "$raconfigdir/videomodes.cfg"
                     cp "$sysrarch/snes/retroarch-overlay-no-tv.cfg" "$configdir/snes/retroarch.cfg" # SNES
                     cp "$sysrarch/mastersystem/retroarch-overlay-no-tv.cfg" "$configdir/mastersystem/retroarch.cfg" # Sega MasterSystem
                     cp "$sysrarch/megadrive/retroarch-overlay-no-tv.cfg" "$configdir/megadrive/retroarch.cfg" # Sega Megadrive
@@ -334,8 +335,8 @@ while :
                     echo ""
                     echo ""
                     # Copy VideoModes
-                    cp "$scriptdir/all-videomodes/videomodes-updated2.cfg" "$configdir/all/videomodes.cfg"
-                    cp "$scriptdir/all-videomodes/retroarch-core-options-updated.cfg" "$configdir/all/retroarch-core-options.cfg"
+                    cp "$scriptdir/all-videomodes/videomodes-updated2.cfg" "$raconfigdir/videomodes.cfg"
+                    cp "$scriptdir/all-videomodes/retroarch-core-options-updated.cfg" "$raconfigdir/retroarch-core-options.cfg"
                     cp "$sysrarch/snes/retroarch-overlay-patrickm-5x-noshader.cfg" "$configdir/snes/retroarch.cfg" # SNES
                     cp "$sysrarch/mastersystem/retroarch-overlay-patrickm-5x-noshader.cfg" "$configdir/mastersystem/retroarch.cfg" # Sega Mastersystem
                     cp "$sysrarch/megadrive/retroarch-overlay-patrickm-5x-noshader.cfg" "$configdir/megadrive/retroarch.cfg" # Sega Megadrive
@@ -355,8 +356,8 @@ while :
                     echo ""
                     echo ""
                     # Copy VideoModes
-                    cp "$scriptdir/all-videomodes/videomodes-updated2.cfg" "$configdir/all/videomodes.cfg"
-                    cp "$scriptdir/all-videomodes/retroarch-core-options-updated.cfg" "$configdir/all/retroarch-core-options.cfg"
+                    cp "$scriptdir/all-videomodes/videomodes-updated2.cfg" "$raconfigdir/videomodes.cfg"
+                    cp "$scriptdir/all-videomodes/retroarch-core-options-updated.cfg" "$raconfigdir/retroarch-core-options.cfg"
                     cp "$sysrarch/snes/retroarch-overlay-patrickm.cfg" "$configdir/snes/retroarch.cfg" # SNES
                     cp "$sysrarch/megadrive/retroarch-overlay-patrickm.cfg" "$configdir/megadrive/retroarch.cfg" # Sega Megadrive
                     cp "$sysrarch/segacd/retroarch-overlay-patrickm.cfg" "$configdir/segacd/retroarch.cfg" # Sega CD
@@ -373,7 +374,7 @@ while :
                   6) # thorig-1080p
                     echo ""
                     echo ""
-                    cp "$scriptdir/all-videomodes/videomodes-updated2.cfg" "$configdir/all/videomodes.cfg" # Copy VideoModes
+                    cp "$scriptdir/all-videomodes/videomodes-updated2.cfg" "$raconfigdir/videomodes.cfg" # Copy VideoModes
                     cp "$scriptdir/users/thorig/system-retroarch-cfg/snes/retroarch-overlay-thorig-1080p-snes.cfg" "$configdir/snes/retroarch.cfg" # SNES
                     cp "$scriptdir/users/thorig/system-retroarch-cfg/mastersystem/retroarch-overlay-thorig-1080p-mastersystem.cfg" "$configdir/mastersystem/retroarch.cfg" # Sega Mastersystem
                     cp "$scriptdir/users/thorig/system-retroarch-cfg/megadrive/retroarch-overlay-thorig-1080p-megadrive.cfg" "$configdir/megadrive/retroarch.cfg" # Sega Megadrive
@@ -444,8 +445,8 @@ while :
                     echo ""
                     echo ""
                     # Copy VideoModes
-                    cp "$scriptdir/all-videomodes/videomodes-updated2.cfg" "$configdir/all/videomodes.cfg"
-                    cp "$scriptdir/all-videomodes/retroarch-core-options-updated.cfg" "$configdir/all/retroarch-core-options.cfg"
+                    cp "$scriptdir/all-videomodes/videomodes-updated2.cfg" "$raconfigdir/videomodes.cfg"
+                    cp "$scriptdir/all-videomodes/retroarch-core-options-updated.cfg" "$raconfigdir/retroarch-core-options.cfg"
                     cp "$sysrarch/snes/retroarch-overlay-patrickm-720p.cfg" "$configdir/snes/retroarch.cfg" #SNES
                     cp "$sysrarch/megadrive/retroarch-overlay-patrickm-720p.cfg" "$configdir/megadrive/retroarch.cfg" # Sega Megadrive
                     cp "$sysrarch/nes/retroarch-overlay-patrickm-720p.cfg" "$configdir/nes/retroarch.cfg" # NES
