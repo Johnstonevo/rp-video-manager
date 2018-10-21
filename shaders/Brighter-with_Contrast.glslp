@@ -1,3 +1,3 @@
 shaders = 2
-shader0 = "/home/$USER/.config/retroarch/shader/gamma.glsl"
-shader1 = "/home/$USER/.config/retroarch/shader/misc/image-adjustment.glsl"
+shader0 = "/home/$USER/.config/retroarch/shaders/gamma.glsl"
+shader1 = "/home/$USER/.config/retroarch/shaders/misc/image-adjustment.glsl"
