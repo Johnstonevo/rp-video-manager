@@ -132,21 +132,21 @@ while :
                     echo ""
                     echo "Please wait (Should take under 5 mins)"
                     # Copy Shaders across
-                    sudo cp -u "$scriptdir/shaders/crt-hyllian-sharpness-hack.glsl" "$raconfigdir/shader/crt-hyllian-sharpness-hack.glsl"
-                    sudo cp -u "$scriptdir/shaders/Brighter-with_Contrast.glslp" "$raconfigdir/shader/Brighter-with_Contrast.glslp"
+                    sudo cp -u "$scriptdir/shaders/crt-hyllian-sharpness-hack.glsl" "$raconfigdir/shaders/crt-hyllian-sharpness-hack.glsl"
+                    sudo cp -u "$scriptdir/shaders/Brighter-with_Contrast.glslp" "$raconfigdir/shaders/Brighter-with_Contrast.glslp"
                     # General overlays
                     sudo mkdir -p "$raconfigdir/overlays/1080p_4-3"
                     sudo cp -r "$scriptdir/1080p_4-3/"* "$raconfigdir/overlays/1080p_4-3/"
                     # Thorig overlays
                     sudo cp -r "$scriptdir/users/thorig/overlays/"* "$raconfigdir/overlays/1080p_4-3/"
                     # davej Shaders
-                    sudo cp -r "$scriptdir/users/davej/shaders/crt-pi/"* "$raconfigdir/shader/"
+                    sudo cp -r "$scriptdir/users/davej/shaders/crt-pi/"* "$raconfigdir/shaders/"
                     # Chito Overlays
                     sudo mkdir -p "$raconfigdir/overlays/chito"
                     sudo cp -r "$scriptdir/users/chito/overlays/"* "$raconfigdir/overlays/chito/"
                     # Arcade Bezels
-                    sudo mkdir -p "$raconfigdir/shader/arcade-bezel-shader"
-                    sudo cp -r "$scriptdir/users/arcade-bezels/arcade-bezel-shader/"* "$raconfigdir/shader/arcade-bezel-shader/"
+                    sudo mkdir -p "$raconfigdir/shaders/arcade-bezel-shader"
+                    sudo cp -r "$scriptdir/users/arcade-bezels/arcade-bezel-shader/"* "$raconfigdir/shaders/arcade-bezel-shader/"
                     sudo mkdir -p "$raconfigdir/overlays/arcade-bezel-overlays"
                     sudo cp -r "$scriptdir/users/arcade-bezels/arcade-bezel-overlays/"* "$raconfigdir/overlays/arcade-bezel-overlays/"
                     # Gameboy Palette
@@ -415,7 +415,7 @@ while :
                     echo "Arcade bezel configs have been copied to $romdir/mame-libretro - these will apply to matching roms with MAME 2003"
                     echo "You can of course manually copy these configs (romname.zip.cfg) to any libretro mame/fba based rom folder you want"
                     echo ""
-                    echo "Remember you can manually turn the curvature effect on and off (to reduce CPU use) by manually editing nano $raconfigdir/shader/arcade-bezel-shader/shaders/crt-pi.glsl"
+                    echo "Remember you can manually turn the curvature effect on and off (to reduce CPU use) by manually editing nano $raconfigdir/shaders/arcade-bezel-shader/shaders/crt-pi.glsl"
                     echo "#define CURVATURE = on //#define CURVATURE = off"
                     echo ""
                     break
