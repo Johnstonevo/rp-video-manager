@@ -14,7 +14,7 @@ biosdir="$datadir/BIOS"
 romdir="$datadir/roms"
 emudir="$rootdir/emulators"
 configdir="$home/.config/RetroPie"
-raconfigdir="$home/.config/retoroarch"
+raconfigdir="$home/.config/retroarch"
 
 scriptdir="$(dirname "$0")"
 scriptdir="$(cd "$scriptdir" && pwd)"
