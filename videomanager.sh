@@ -482,5 +482,5 @@ while :
       esac
     done
   done
-#exit 0
+exit 0
 $
