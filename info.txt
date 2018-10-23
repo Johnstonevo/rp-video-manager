@@ -84,8 +84,8 @@ These are designed for a 720p screen
 
 "Arcade Bezels"
 This will apply overlays on a per rom basis including shaders. The curvature effect is on by default but you can turn this off if you edit
-/home/$USER/.config/retroarch/shaders/arcade-bezel-shader/shaders/crt-pi.glsl
-/home/$USER/.config/retroarch/shaders/arcade-bezel-shader/shaders/crt-pi-vertical.glsl
+/home/$user/.config/retroarch/shaders/arcade-bezel-shader/shaders/crt-pi.glsl
+/home/$user/.config/retroarch/shaders/arcade-bezel-shader/shaders/crt-pi-vertical.glsl
 #define CURVATURE = on
 //#define CURVATURE = off
 
