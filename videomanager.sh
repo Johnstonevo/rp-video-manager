@@ -160,7 +160,7 @@ while :
                     sudo cp "$scriptdir/shaders/patrickm-scanlines1920x1080.png" "$raconfigdir/overlay/effects/scanlines/patrickm-scanlines1920x1080.png"
                     sudo cp "$scriptdir/shaders/patrickm-scanlines1280x720.cfg" "$raconfigdir/overlay/effects/scanlines/patrickm-scanlines1280x720.cfg"
                     sudo cp "$scriptdir/shaders/patrickm-scanlines1280x720.png" "$raconfigdir/overlay/effects/scanlines/patrickm-scanlines1280x720.png"
-                    sudo chown -R $user:$user  "$raconfigdir/overlays"
+                    sudo chown -R $user:$user  "$raconfigdir/overlay"
                     sudo chown -R $user:$user  "$raconfigdir/shaders"
                     echo "Required files installed - you dont need to run this again"
                     echo ""
